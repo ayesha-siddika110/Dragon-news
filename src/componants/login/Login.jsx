@@ -7,7 +7,7 @@ const Login = () => {
     return (
         <div className=' bg-base-200 m-auto'>
             <div className='flex w-[90%] m-auto justify-between items-center py-6'>
-            <div className='w-[20%]'></div>
+            <div className='w-[12%]'></div>
             <div className='space-x-4'>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
