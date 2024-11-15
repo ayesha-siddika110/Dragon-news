@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import { Box, Rating } from '@mui/material';
 import React from 'react';
-import { CiBookmark, CiShare2 } from 'react-icons/ci';
+
 import { FaEye } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Detail = ({ data }) => {
 
-    const { _id, rating, title, total_view, author, thumbnail_url, image_url, details } = data
-    const { name, published_date, img, } = author
+    const { rating, title, total_view,  image_url, details } = data
+  
     const { number } = rating
     const [value, setValue] = React.useState(number);
 

@@ -21,8 +21,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className='flex justify-between items-center py-6'>
-            <div></div>
+        <div className='flex justify-between items-center py-6  m-auto'>
+            <div className='w-[10%]'></div>
             <div className='space-x-4'>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <FaUserAstronaut className='border-2 border-black rounded-full w-8 h-8 p-1 text-3xl'/>
                 {
                     user ? <NavLink onClick={handleSignOut}  className={`bg-gray-700 text-white px-8 py-2`}>Sign Out</NavLink> : 
-                <NavLink  to="/login" className={`bg-gray-700 text-white px-8 py-2`}>Login</NavLink>
+                <NavLink  to="/login/loginUser" className={`bg-gray-700 text-white px-8 py-2`}>Login</NavLink>
 
                 }
             </div>

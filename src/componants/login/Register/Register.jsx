@@ -1,10 +1,11 @@
 
-import Loginpage from './Login/Loginpage';
+import LoginUser from '../LoginUser/LoginUser';
+
 
 const Login = () => {
     return (
         <div className=' bg-base-200 m-auto'>
-        <Loginpage></Loginpage>
+        <LoginUser></LoginUser>
             
         </div>
     );

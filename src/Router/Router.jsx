@@ -5,6 +5,9 @@ import Home from '../layouts/Home';
 import Pages from '../componants/Pages/Pages';
 import Login from '../../src/componants/login/Login';
 import PagesDetails from '../componants/Pages/PagesDetails';
+import PrivetRoute from './PrivetRoute';
+import LoginUser from '../componants/login/LoginUser/LoginUser';
+import Loginpage from '../componants/login/Register/Registerpage';
 
 const Router = createBrowserRouter([
     {
@@ -27,14 +30,28 @@ const Router = createBrowserRouter([
     },
     {
         path: "/pagesDetails/:id",
-        element: <PagesDetails></PagesDetails>,
+        element: <PrivetRoute>
+            <PagesDetails></PagesDetails>
+        </PrivetRoute>,
         loader: ({params})=>fetch(`https://openapi.programming-hero.com/api/news/${params.id}`)
 
 
     },
     {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
+        children: [
+            {
+                path: "/login/loginUser",
+                element: <LoginUser></LoginUser>
+
+                
+            },
+            {
+                path: "/login/registration",
+                element: <Loginpage></Loginpage>
+            }
+        ]
 
     }
 ])

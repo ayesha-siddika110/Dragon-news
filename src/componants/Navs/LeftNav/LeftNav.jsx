@@ -18,7 +18,7 @@ const LeftNav = () => {
     
     return (
         <div className='flex flex-col'>
-            <h1 className='font-semibold text-lg'>All category</h1>
+            <h1 className='font-semibold text-xl'>All category</h1>
             <div className='flex flex-col '>
 
             {

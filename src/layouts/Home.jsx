@@ -19,7 +19,7 @@ const Home = () => {
                 <Navbar></Navbar>
             </nav>
             <section className='flex gap-6'>
-                <div className='22
+                <div className='
                 w-[20%]'>
                     <LeftNav></LeftNav>
                 </div>

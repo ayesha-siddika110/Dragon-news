@@ -1,8 +1,7 @@
-import React from 'react';
+
 import logo from "../assets/logo.png"
 
 import moment from 'moment';
-import HeaderMarque from './HeaderMarque';
 
 const Header = () => {
     return (

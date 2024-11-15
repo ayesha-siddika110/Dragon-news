@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Header from "../Header";
 import Detail from "./detail/Detail";
 import RightNav from "../Navs/RightNav/RightNav";
+import Navbar from "../Navbar";
 
 
 const PagesDetails = () => {
@@ -13,6 +14,7 @@ const PagesDetails = () => {
     return (
         <div>
             <Header></Header>
+            
 
             <div className="w-[90%] m-auto gap-6 flex mt-6">
             <section className="w-[80%]">
