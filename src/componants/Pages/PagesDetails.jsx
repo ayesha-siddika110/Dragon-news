@@ -7,7 +7,7 @@ import Navbar from "../Navbar";
 
 const PagesDetails = () => {
     const data = useLoaderData()
-    // console.log(data.data[0]);
+    console.log(data.data[0]);
 
 
     

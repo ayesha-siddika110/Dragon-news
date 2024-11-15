@@ -2,11 +2,12 @@ import { useContext } from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
+import { RingLoader } from 'react-spinners';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const LoginUser = () => {
-    const {signInUser, setUser} = useContext(AuthContext)
+    const {signInUser, setUser, loading} = useContext(AuthContext)
     const navigate = useNavigate()
 
 
@@ -32,7 +33,8 @@ const LoginUser = () => {
     }
 
     return (
-        <div>
+        <div className=''>
+            
             <div className="hero">
                 <div className="hero-content  flex-col lg:flex-row-reverse">
 

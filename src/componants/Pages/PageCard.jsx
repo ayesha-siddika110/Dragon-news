@@ -10,7 +10,7 @@ import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const PageCard = ({ page }) => {
-    const { _id, rating, title, total_view, author, thumbnail_url, image_url, details } = page
+    const { _id, rating, title, total_view, author, image_url, details } = page
     const { name, published_date, img, } = author
     const { number } = rating
 

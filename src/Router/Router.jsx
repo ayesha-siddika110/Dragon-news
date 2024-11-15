@@ -30,9 +30,11 @@ const Router = createBrowserRouter([
     },
     {
         path: "/pagesDetails/:id",
-        element: <PrivetRoute>
-            <PagesDetails></PagesDetails>
-        </PrivetRoute>,
+            
+            element: <PagesDetails></PagesDetails>,
+        //<PrivetRoute> //privet router na dile kaj hocche
+        
+        //</PrivetRoute>,
         loader: ({params})=>fetch(`https://openapi.programming-hero.com/api/news/${params.id}`)
 
 
