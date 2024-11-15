@@ -1,5 +1,6 @@
 
 import Header from '../componants/Header';
+import HeaderMarque from '../componants/HeaderMarque';
 import Navbar from '../componants/Navbar';
 import LeftNav from '../componants/Navs/LeftNav/LeftNav';
 import RightNav from '../componants/Navs/RightNav/RightNav';
@@ -11,6 +12,7 @@ const Home = () => {
         <div className='font-poppins w-[90%] m-auto'>
             <header>
             <Header></Header>
+            <HeaderMarque></HeaderMarque>
 
             </header>
             <nav className=' m-auto'>

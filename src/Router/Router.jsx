@@ -4,6 +4,7 @@ import ErrorPage from './ErrorPage';
 import Home from '../layouts/Home';
 import Pages from '../componants/Pages/Pages';
 import Login from '../../src/componants/login/Login';
+import PagesDetails from '../componants/Pages/PagesDetails';
 
 const Router = createBrowserRouter([
     {
@@ -26,12 +27,14 @@ const Router = createBrowserRouter([
     },
     {
         path: "/pagesDetails/:id",
-        element: <h1>details</h1>
+        element: <PagesDetails></PagesDetails>,
+        loader: ({params})=>fetch(`https://openapi.programming-hero.com/api/news/${params.id}`)
+
 
     },
     {
         path: "/login",
-        element: <Login>login</Login>
+        element: <Login></Login>
 
     }
 ])
