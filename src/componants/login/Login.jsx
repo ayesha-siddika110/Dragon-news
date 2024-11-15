@@ -1,11 +1,12 @@
-import React from 'react';
-import { FaUserAstronaut } from 'react-icons/fa';
+
+import { FaUserAstronaut } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
-import Loginpage from './Loginpage';
+import Loginpage from './Register/Registerpage';
 
 const Login = () => {
     return (
-        <div className=' bg-base-200 m-auto'>
+        <div>
+           <div className=' bg-base-200 m-auto'>
             <div className='flex w-[90%] m-auto justify-between items-center py-6'>
             <div className='w-[12%]'></div>
             <div className='space-x-4'>
@@ -20,6 +21,8 @@ const Login = () => {
             
         </div>
         <Loginpage></Loginpage>
+            
+        </div>
             
         </div>
     );

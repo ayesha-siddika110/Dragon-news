@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+/* eslint-disable no-unused-vars */
+import { useContext } from 'react';
 import Checkbox from '@mui/material/Checkbox';
-import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../../../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };

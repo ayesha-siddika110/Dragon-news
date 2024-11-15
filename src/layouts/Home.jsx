@@ -1,9 +1,9 @@
-import React from 'react';
+
 import Header from '../componants/Header';
 import Navbar from '../componants/Navbar';
 import LeftNav from '../componants/Navs/LeftNav/LeftNav';
 import RightNav from '../componants/Navs/RightNav/RightNav';
-import Pages from '../componants/Pages/Pages';
+
 import { Outlet } from 'react-router-dom';
 
 const Home = () => {
