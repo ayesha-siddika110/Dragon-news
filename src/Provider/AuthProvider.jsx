@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import auth from '../firebase/firebase';
 
 export const AuthContext = createContext() //AuthContext Export korte hobe 
@@ -22,12 +22,25 @@ const AuthProvider = ({children}) => {
     }
 
     
+    const provider = new GoogleAuthProvider()
+    const signInwithgoogle =()=>{
+        return signInWithPopup(auth, provider)
+    }
+
+    const githubprovider = new GithubAuthProvider()
+    const signInwithgithub = ()=>{
+        return signInWithPopup(auth, githubprovider)
+    }
+
+    
     const authinfo ={
         user,
         setUser,
         createUser,
         updateProfileData,
-        signOutUser
+        signOutUser,
+        signInwithgoogle,
+        signInwithgithub
         
     }
 

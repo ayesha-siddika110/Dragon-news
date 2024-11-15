@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from 'react-icons/fa6';
 import fb from "../../../assets/fb.png";
@@ -7,8 +8,35 @@ import insta from "../../../assets/instagram.png"
 import swim from "../../../assets/swimming.png"
 import classes from "../../../assets/class.png"
 import play from "../../../assets/playground.png"
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const RightNav = () => {
+    const {signInwithgoogle, signInwithgithub} = useContext(AuthContext)
+    const handleGoogle =()=>{
+        signInwithgoogle()
+        .then(res=>{
+            console.log('hello');
+            
+        })
+        .catch(err=>{
+            console.log(err);
+            
+        })
+
+    }
+
+
+    const handleGithub=()=>{
+        signInwithgithub()
+        .then(()=>{
+
+        })
+        .catch(err=>{
+            console.log(err.message);
+            
+        })
+        
+    }
     return (
         <div className='space-y-4'>
 
@@ -18,12 +46,12 @@ const RightNav = () => {
                 <h1 className='font-semibold text-2xl' >Login With</h1>
                 <div className='space-y-3'>
                     {/* google */}
-                    <div className='flex items-center space-x-2 justify-center border-2 py-2 rounded-lg text-blue-500 border-blue-400'>
+                    <div onClick={handleGoogle} className='flex cursor-pointer items-center space-x-2 justify-center border-2 py-2 rounded-lg text-blue-500 border-blue-400'>
                         <FaGoogle></FaGoogle>
                         <p>Login with Google</p>
                     </div>
                     {/* github */}
-                    <div className='flex items-center space-x-2 justify-center border-2 py-2 rounded-lg text-black border-black'>
+                    <div onClick={handleGithub} className='flex items-center space-x-2 cursor-pointer justify-center border-2 py-2 rounded-lg text-black border-black'>
                         <FaGithub></FaGithub>
                         <p>Login with github</p>
                     </div>

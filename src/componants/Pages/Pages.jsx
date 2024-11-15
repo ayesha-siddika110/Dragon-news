@@ -4,7 +4,7 @@ import PageCard from './PageCard';
 
 const Pages = () => {
     const {data} = useLoaderData()
-    console.log(data);
+    // console.log(data);
     
     
     return (

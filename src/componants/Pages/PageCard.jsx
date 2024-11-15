@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import { FaEye } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const PageCard = ({ page }) => {
     const { _id, rating, title, total_view, author, thumbnail_url, image_url, details } = page
@@ -56,12 +57,12 @@ const PageCard = ({ page }) => {
                     <p>
                         {displayText}
                     </p>
-                    <button
+                    <Link to={`/pagesDetails/${_id}`}
                         onClick={toggleReadMore}
                         className="text-blue-500 mt-2 hover:text-blue-700 focus:outline-none font-medium"
                     >
                         {isExpanded ? 'Read Less' : 'Read More'}
-                    </button>
+                    </Link>
                 </div>
                 <hr />
                 {/* <p className="text-gray-700">{displayText}</p> */}
